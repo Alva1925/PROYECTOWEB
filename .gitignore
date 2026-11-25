@@ -1,0 +1,33 @@
+# ── Python ──────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# ── Entornos virtuales ──────────────────────────────────
+venv/
+.venv/
+env/
+.env/
+
+# ── Variables de entorno ────────────────────────────────
+.env
+*.env
+
+# ── Base de datos SQLite (generada en runtime) ──────────
+*.db
+*.sqlite3
+
+# ── Distribución / build ────────────────────────────────
+dist/
+build/
+*.egg-info/
+
+# ── IDEs ────────────────────────────────────────────────
+.vscode/
+.idea/
+*.code-workspace
+
+# ── Sistema operativo ───────────────────────────────────
+.DS_Store
+Thumbs.db

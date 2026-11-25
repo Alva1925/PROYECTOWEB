@@ -165,6 +165,29 @@ class RegistroDiarioOut(RegistroDiarioBase):
 
 
 # ──────────────────────────────────────────────────────────
+# ACTUALIZACIÓN DE PESO  (PATCH /usuarios/{id}/peso)
+# ──────────────────────────────────────────────────────────
+
+class PesoUpdate(BaseModel):
+    """Payload mínimo para actualizar únicamente el peso del usuario."""
+    peso_actual: float = Field(..., gt=0, description="Nuevo peso en kg")
+
+
+# ──────────────────────────────────────────────────────────
+# HISTORIAL DIARIO  (GET /registros-diarios/{id}/historial)
+# ──────────────────────────────────────────────────────────
+
+class HistorialItemOut(BaseModel):
+    """Resumen de un día: fecha, calorías y proteínas consumidas."""
+    fecha:           date
+    total_calorias:  int
+    total_proteinas: float
+
+    class Config:
+        from_attributes = True
+
+
+# ──────────────────────────────────────────────────────────
 # RESPUESTA DEL AGENTE
 # ──────────────────────────────────────────────────────────
 
